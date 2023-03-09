@@ -19,6 +19,12 @@ program.option('-d --dest <dest>', 'a destination folder,例如： -d /src/compo
 program.option('-f --framework <framework>', 'your framework', )
 // 实践发现option是模糊匹配的 -d/src与-d /src一样。空格表示参数分割，<dest>只会匹配第一个
 
+// 事实上方法是可以链式调用
+/*
+program
+   .option('-d --dest <dest>', 'a destination folder,例如： -d /src/components', )
+   .option('-f --framework <framework>', 'your framework', )
+*/
 // 监听指令
 program.on('--help', function() {
   console.log("");
